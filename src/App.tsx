@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useAppSelector } from "./store/hooks";
+
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import LightBox from "./Components/LightBox/LightBox";
+import NavMobile from "./Components/Navbar/NavMobile";
 
 function App() {
+  const showLightBox: boolean = useAppSelector(
+    (state) => state.app.showLightBox
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavMobile />
+      <Navbar />
+      <Home />
+      {showLightBox && <LightBox />}
+    </>
   );
 }
 
