@@ -6,9 +6,9 @@ interface Props {
 
 const Menu = ({ clickHandler }: Props) => {
   return (
-    <button className="sm:hidden" onClick={clickHandler}>
+    <div className="md:hidden cursor:pointer" onClick={clickHandler}>
       <img className="w-4" src={menu} alt={menu} />
-    </button>
+    </div>
   );
 };
 

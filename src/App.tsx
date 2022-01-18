@@ -2,7 +2,7 @@ import { useAppSelector, useAppDispatch } from "./store/hooks";
 import { appActions } from "./store/appSlice";
 
 import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Components/Home/Home";
+import Home from "./Pages/Home/Home";
 import LightBox from "./Components/LightBox/LightBox";
 import NavDrawer from "./Components/NavDrawer/NavDrawer";
 

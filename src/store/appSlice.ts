@@ -27,6 +27,7 @@ interface InitialState {
   showLightBox: boolean;
   activeThumbnailIndex: number;
   showNavDrawer: boolean;
+  showCartContent: boolean;
 }
 
 const initialState: InitialState = {
@@ -43,6 +44,7 @@ const initialState: InitialState = {
   showLightBox: false,
   activeThumbnailIndex: 0,
   showNavDrawer: false,
+  showCartContent: false,
 };
 
 const appSlice = createSlice({
@@ -113,6 +115,9 @@ const appSlice = createSlice({
     },
     showNavDrawer(state) {
       state.showNavDrawer = !state.showNavDrawer;
+    },
+    showCart(state) {
+      state.showCartContent = !state.showCartContent;
     },
   },
 });
