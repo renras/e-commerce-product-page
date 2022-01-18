@@ -6,6 +6,7 @@ import Cart from "../Cart/Cart";
 import Nav from "./Nav";
 import logo from "../../images/logo.svg";
 import Menu from "../Menu/Menu";
+import CartContent from "../CartContent/CartContent";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -30,6 +31,12 @@ const Navbar = () => {
       <div className="flex items-center gap-8 ml-auto">
         <div className="mt-2 relative">
           <Cart clickHandler={showCart} />
+          {totalItems > 0 && (
+            <p className="absolute bottom-4 left-3.5  text-xs bg-orange text-white px-2 rounded-xl">
+              {totalItems}
+            </p>
+          )}
+          {showCartContent && <CartContent />}
         </div>
         <img
           className="w-8 lg:w-12 border-2 rounded-full border-opacity-0 border-orange hover:border-opacity-100"
@@ -42,12 +49,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* {totalItems > 0 && (
-        <p className="absolute bottom-4 left-3.5  text-xs bg-orange text-white px-2 rounded-xl">
-          {totalItems}
-        </p>
-      )}
-      {showCartContent && <CartContent />} */
-}

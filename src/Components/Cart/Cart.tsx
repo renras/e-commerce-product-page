@@ -6,7 +6,7 @@ interface Props {
 
 const Cart = ({ clickHandler }: Props) => {
   return (
-    <div onClick={clickHandler}>
+    <div className="cursor-pointer" onClick={clickHandler}>
       <img className="w-6" src={cart} alt="cart" />
     </div>
   );

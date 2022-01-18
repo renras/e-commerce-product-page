@@ -27,8 +27,8 @@ function App() {
         closeNavDrawer={closeNavDrawer}
       />
       <Navbar />
-      {/* <Home />
-      {showLightBox && <LightBox />} */}
+      <Home />
+      {showLightBox && <LightBox />}
     </>
   );
 }
