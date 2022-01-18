@@ -11,7 +11,7 @@ const NavDrawer = ({ showNavDrawer, closeNavDrawer, navList }: Props) => {
     <div
       className={`${
         !showNavDrawer ? "w-0 overflow-hidden" : "w-full"
-      } absolute left-0 h-screen z-10 bg-black`}
+      } absolute left-0 h-screen z-10 bg-black md:hidden`}
     >
       <nav
         className={`${

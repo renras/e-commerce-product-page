@@ -42,7 +42,7 @@ const initialState: InitialState = {
   totalItems: 0,
   showLightBox: false,
   activeThumbnailIndex: 0,
-  showNavDrawer: true,
+  showNavDrawer: false,
 };
 
 const appSlice = createSlice({
