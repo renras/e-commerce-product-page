@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { RootState } from './store';
+import { createSlice } from "@reduxjs/toolkit";
+import type { RootState } from "./store";
 
 interface InitialState {
   showCart: boolean;
@@ -10,7 +10,7 @@ const initialState: InitialState = {
 };
 
 export const cartSlice = createSlice({
-  name: 'cart',
+  name: "cart",
   initialState,
   reducers: {
     showCart(state) {
@@ -21,6 +21,6 @@ export const cartSlice = createSlice({
 
 export const cartActions = cartSlice.actions;
 
-export const selectNavMobile = (state: RootState) => state.navMobile;
+export const selectCart = (state: RootState) => state.cart;
 
 export default cartSlice.reducer;
