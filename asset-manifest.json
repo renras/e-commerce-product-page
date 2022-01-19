@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/e-commerce-product-page/static/css/main.953168d3.chunk.css",
-    "main.js": "/e-commerce-product-page/static/js/main.47cdeeb2.chunk.js",
-    "main.js.map": "/e-commerce-product-page/static/js/main.47cdeeb2.chunk.js.map",
+    "main.css": "/e-commerce-product-page/static/css/main.e6968e54.chunk.css",
+    "main.js": "/e-commerce-product-page/static/js/main.a18b7576.chunk.js",
+    "main.js.map": "/e-commerce-product-page/static/js/main.a18b7576.chunk.js.map",
     "runtime-main.js": "/e-commerce-product-page/static/js/runtime-main.6cc7775f.js",
     "runtime-main.js.map": "/e-commerce-product-page/static/js/runtime-main.6cc7775f.js.map",
     "static/js/2.95f81006.chunk.js": "/e-commerce-product-page/static/js/2.95f81006.chunk.js",
     "static/js/2.95f81006.chunk.js.map": "/e-commerce-product-page/static/js/2.95f81006.chunk.js.map",
     "index.html": "/e-commerce-product-page/index.html",
-    "static/css/main.953168d3.chunk.css.map": "/e-commerce-product-page/static/css/main.953168d3.chunk.css.map",
+    "static/css/main.e6968e54.chunk.css.map": "/e-commerce-product-page/static/css/main.e6968e54.chunk.css.map",
     "static/js/2.95f81006.chunk.js.LICENSE.txt": "/e-commerce-product-page/static/js/2.95f81006.chunk.js.LICENSE.txt",
     "static/media/icon-cart-light.7e9c04e5.svg": "/e-commerce-product-page/static/media/icon-cart-light.7e9c04e5.svg",
     "static/media/icon-cart.350712f0.svg": "/e-commerce-product-page/static/media/icon-cart.350712f0.svg",
@@ -17,7 +17,6 @@
     "static/media/icon-delete.1fd1f1f7.svg": "/e-commerce-product-page/static/media/icon-delete.1fd1f1f7.svg",
     "static/media/icon-menu.c6107d03.svg": "/e-commerce-product-page/static/media/icon-menu.c6107d03.svg",
     "static/media/icon-minus.f5073aa8.svg": "/e-commerce-product-page/static/media/icon-minus.f5073aa8.svg",
-    "static/media/icon-next.9621183a.svg": "/e-commerce-product-page/static/media/icon-next.9621183a.svg",
     "static/media/icon-plus.b297868c.svg": "/e-commerce-product-page/static/media/icon-plus.b297868c.svg",
     "static/media/icon-previous.80616402.svg": "/e-commerce-product-page/static/media/icon-previous.80616402.svg",
     "static/media/image-product-1.520cc50b.jpg": "/e-commerce-product-page/static/media/image-product-1.520cc50b.jpg",
@@ -29,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.6cc7775f.js",
     "static/js/2.95f81006.chunk.js",
-    "static/css/main.953168d3.chunk.css",
-    "static/js/main.47cdeeb2.chunk.js"
+    "static/css/main.e6968e54.chunk.css",
+    "static/js/main.a18b7576.chunk.js"
   ]
 }
