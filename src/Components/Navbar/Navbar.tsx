@@ -1,12 +1,13 @@
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { appActions } from "../../store/appSlice";
 
-import avatar from "../../images/image-avatar.png";
 import Cart from "../Cart/Cart";
 import Nav from "./Nav";
 import logo from "../../images/logo.svg";
 import Menu from "../Menu/Menu";
 import CartContent from "../CartContent/CartContent";
+import avatar from "../../images/image-avatar.png";
+import Avatar from "../../Components/Avatar/Avatar";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -38,11 +39,7 @@ const Navbar = () => {
           )}
           {showCartContent && <CartContent />}
         </div>
-        <img
-          className="w-8 lg:w-12 border-2 rounded-full border-opacity-0 border-orange hover:border-opacity-100"
-          src={avatar}
-          alt="profile-avatar"
-        />
+        <Avatar img={avatar} />
       </div>
     </header>
   );
