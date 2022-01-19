@@ -1,13 +1,13 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from './store';
-import thumbnail1 from '../images/image-product-1-thumbnail.jpg';
-import thumbnail2 from '../images/image-product-2-thumbnail.jpg';
-import thumbnail3 from '../images/image-product-3-thumbnail.jpg';
-import thumbnail4 from '../images/image-product-4-thumbnail.jpg';
-import fullimage1 from '../images/image-product-1.jpg';
-import fullimage2 from '../images/image-product-2.jpg';
-import fullimage3 from '../images/image-product-3.jpg';
-import fullimage4 from '../images/image-product-4.jpg';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from "./store";
+import thumbnail1 from "../images/image-product-1-thumbnail.jpg";
+import thumbnail2 from "../images/image-product-2-thumbnail.jpg";
+import thumbnail3 from "../images/image-product-3-thumbnail.jpg";
+import thumbnail4 from "../images/image-product-4-thumbnail.jpg";
+import fullimage1 from "../images/image-product-1.jpg";
+import fullimage2 from "../images/image-product-2.jpg";
+import fullimage3 from "../images/image-product-3.jpg";
+import fullimage4 from "../images/image-product-4.jpg";
 
 interface InitialState {
   products: {
@@ -26,12 +26,14 @@ interface InitialState {
   totalItems: number;
   showLightBox: boolean;
   activeThumbnailIndex: number;
+  showNavDrawer: boolean;
+  showCartContent: boolean;
 }
 
 const initialState: InitialState = {
   products: [
     {
-      title: 'Fall Limited Edition Sneakers',
+      title: "Fall Limited Edition Sneakers",
       price: 125,
       thumbnail: [thumbnail1, thumbnail2, thumbnail3, thumbnail4],
       fullimages: [fullimage1, fullimage2, fullimage3, fullimage4],
@@ -41,10 +43,12 @@ const initialState: InitialState = {
   totalItems: 0,
   showLightBox: false,
   activeThumbnailIndex: 0,
+  showNavDrawer: false,
+  showCartContent: false,
 };
 
 const appSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState: initialState,
   reducers: {
     addToCart(state, action: PayloadAction<{ quantity: number; id: number }>) {
@@ -108,6 +112,12 @@ const appSlice = createSlice({
     },
     changeActiveThumbnailIndex(state, action: PayloadAction<number>) {
       state.activeThumbnailIndex = action.payload;
+    },
+    showNavDrawer(state) {
+      state.showNavDrawer = !state.showNavDrawer;
+    },
+    showCart(state) {
+      state.showCartContent = !state.showCartContent;
     },
   },
 });

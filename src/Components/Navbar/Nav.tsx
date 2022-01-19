@@ -1,13 +1,14 @@
 const Nav = () => {
   const navList: string[] = ["Collections", "Men", "Women", "About", "Contact"];
 
+  // xl:ml-16
   return (
-    <nav className="xs:hidden lg:block lg:h-full ml-10 xl:ml-16">
-      <ul className="lg:flex gap-8 lg:h-full lg:items-center">
+    <nav className="hidden md:block block h-full ml-10">
+      <ul className="flex gap-8 h-full items-center">
         {navList.map((item, index) => {
           return (
             <li
-              className="lg:border-b-2 lg:border-orange lg:border-opacity-0 lg:h-full lg:flex lg:items-center lg:hover:border-opacity-100 text-dark-grayish-blue"
+              className="border-b-2 border-orange border-opacity-0 h-full flex items-center hover:border-opacity-100 text-dark-grayish-blue"
               key={index}
             >
               <a href="/">{item}</a>

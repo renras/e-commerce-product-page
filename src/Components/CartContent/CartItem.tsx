@@ -1,6 +1,5 @@
-import deleteIcon from "../../images/icon-delete.svg";
-
 import useFetch from "./useCart";
+import DeleteButton from "../../Components/DeleteButton/DeleteButton";
 
 interface Props {
   item: {
@@ -15,9 +14,13 @@ interface Props {
 const CartItem = ({ item }: Props) => {
   const { removeItem } = useFetch();
 
+  const deleteButtonClickHandler = (): void => {
+    removeItem(item.id);
+  };
+
   return (
     <div key={item.id}>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2 sm:gap-6">
         <img className="w-16 rounded-lg" src={item.thumbnail} alt="shoes" />
         <div className="flex flex-col text-dark-grayish-blue text-lg">
           <p>{item.title}</p>
@@ -28,9 +31,7 @@ const CartItem = ({ item }: Props) => {
             </span>
           </p>
         </div>
-        <button onClick={() => removeItem(item.id)}>
-          <img src={deleteIcon} alt="delete-icon" />
-        </button>
+        <DeleteButton clickHandler={deleteButtonClickHandler} />
       </div>
     </div>
   );

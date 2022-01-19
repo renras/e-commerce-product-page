@@ -1,14 +1,41 @@
-import AddToCartButton from "./AddToCartButton";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { productQuantityActions } from "../../store/productQuantity";
+import { appActions } from "../../store/appSlice";
 
-import { useAppSelector } from "../../store/hooks";
-import ProductQuantity from "./ProductQuantity";
+import ValueIncrementer from "../../Components/ValueIncrementer/ValueIncrementer";
+import Button from "../../Components/Button/Button";
+import lightCart from "../../images/icon-cart-light.svg";
 
 const RightSection = () => {
+  const productQuantity = useAppSelector(
+    (state) => state.productQuantity.currentValue
+  );
   const price = useAppSelector((state) => state.app.products[0].price);
+  const currentValue: number = useAppSelector(
+    (state) => state.productQuantity.currentValue
+  );
+  const dispatch = useAppDispatch();
+
+  const increment = (): void => {
+    dispatch(productQuantityActions.increment());
+  };
+
+  const decrement = (): void => {
+    dispatch(productQuantityActions.decrement());
+  };
+
+  const addToCart = (): void => {
+    dispatch(
+      appActions.addToCart({
+        quantity: productQuantity,
+        id: new Date().getTime(),
+      })
+    );
+  };
 
   return (
     <section
-      className="p-6 xs:grid-cols-2 lg:grid-cols-3  grid gap-y-2 items-center lg:w-1/3 xl:gap-y-4
+      className="p-6 grid-cols-2 lg:grid-cols-3  grid gap-y-2 items-center lg:w-1/3 xl:gap-y-4
      auto-rows-max lg:gap-x-4 lg:gap-y-0"
     >
       <div className="flex flex-col col-start-1 col-span-3 xl:gap-4">
@@ -35,8 +62,18 @@ const RightSection = () => {
           ${Number(250).toFixed(2)}
         </del>
       </div>
-      <ProductQuantity />
-      <AddToCartButton />
+      <ValueIncrementer
+        value={currentValue}
+        incrementHandler={increment}
+        decrementHandler={decrement}
+      />
+      <Button
+        className="gap-4 mt-2 flex justify-center items-center col-start-1 col-span-2 lg:col-start-2 lg:col-span-2 lg:mt-0"
+        text="Add to cart"
+        clickHandler={addToCart}
+      >
+        <img className="fill-white w-4 lg:w-3" src={lightCart} alt="cartIcon" />
+      </Button>
     </section>
   );
 };

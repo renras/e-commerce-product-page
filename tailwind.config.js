@@ -2,11 +2,6 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    screens: {
-      xs: "375px",
-      lg: "1024px",
-      xl: "1440px",
-    },
     colors: {
       orange: "hsl(26, 100%, 55%)",
       "pale-orange": "hsl(25, 100%, 94%)",
