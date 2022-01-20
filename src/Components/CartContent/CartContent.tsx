@@ -12,8 +12,8 @@ const Cart = () => {
       </div>
       <div className="flex flex-col px-6 gap-8 pt-6 pb-8">
         {cart.length > 0 ? (
-          cart.map((item) => {
-            return <CartItem item={item} />;
+          cart.map((item, index) => {
+            return <CartItem item={item} key={index} />;
           })
         ) : (
           <div className="h-52 flex items-center justify-center text-dark-grayish-blue font-bold text-lg">

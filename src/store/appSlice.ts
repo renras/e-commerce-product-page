@@ -91,12 +91,14 @@ const appSlice = createSlice({
 
       state.cart = newCart;
     },
-    showLightBox(state, action: PayloadAction<number>) {
-      state.showLightBox = !state.showLightBox;
+    changeLightBoxIndex(state, action: PayloadAction<number>) {
       state.activeThumbnailIndex = action.payload;
     },
+    showLightBox(state) {
+      state.showLightBox = true;
+    },
     closeLightBox(state) {
-      state.showLightBox = !state.showLightBox;
+      state.showLightBox = false;
     },
     incrementActiveThumbnailIndex(state) {
       state.activeThumbnailIndex += 1;
