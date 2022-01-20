@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/e-commerce-product-page/static/css/main.e6968e54.chunk.css",
-    "main.js": "/e-commerce-product-page/static/js/main.a18b7576.chunk.js",
-    "main.js.map": "/e-commerce-product-page/static/js/main.a18b7576.chunk.js.map",
+    "main.js": "/e-commerce-product-page/static/js/main.05ad03bb.chunk.js",
+    "main.js.map": "/e-commerce-product-page/static/js/main.05ad03bb.chunk.js.map",
     "runtime-main.js": "/e-commerce-product-page/static/js/runtime-main.6cc7775f.js",
     "runtime-main.js.map": "/e-commerce-product-page/static/js/runtime-main.6cc7775f.js.map",
-    "static/js/2.95f81006.chunk.js": "/e-commerce-product-page/static/js/2.95f81006.chunk.js",
-    "static/js/2.95f81006.chunk.js.map": "/e-commerce-product-page/static/js/2.95f81006.chunk.js.map",
+    "static/js/2.460b0fad.chunk.js": "/e-commerce-product-page/static/js/2.460b0fad.chunk.js",
+    "static/js/2.460b0fad.chunk.js.map": "/e-commerce-product-page/static/js/2.460b0fad.chunk.js.map",
     "index.html": "/e-commerce-product-page/index.html",
     "static/css/main.e6968e54.chunk.css.map": "/e-commerce-product-page/static/css/main.e6968e54.chunk.css.map",
-    "static/js/2.95f81006.chunk.js.LICENSE.txt": "/e-commerce-product-page/static/js/2.95f81006.chunk.js.LICENSE.txt",
+    "static/js/2.460b0fad.chunk.js.LICENSE.txt": "/e-commerce-product-page/static/js/2.460b0fad.chunk.js.LICENSE.txt",
     "static/media/icon-cart-light.7e9c04e5.svg": "/e-commerce-product-page/static/media/icon-cart-light.7e9c04e5.svg",
     "static/media/icon-cart.350712f0.svg": "/e-commerce-product-page/static/media/icon-cart.350712f0.svg",
     "static/media/icon-close-light.15d6ae32.svg": "/e-commerce-product-page/static/media/icon-close-light.15d6ae32.svg",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6cc7775f.js",
-    "static/js/2.95f81006.chunk.js",
+    "static/js/2.460b0fad.chunk.js",
     "static/css/main.e6968e54.chunk.css",
-    "static/js/main.a18b7576.chunk.js"
+    "static/js/main.05ad03bb.chunk.js"
   ]
 }
