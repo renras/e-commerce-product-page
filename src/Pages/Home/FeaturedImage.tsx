@@ -22,6 +22,10 @@ const FeaturedImage = () => {
     dispatch(appActions.incrementActiveThumbnailIndex());
   };
 
+  const showLightBox = (index: number): void => {
+    dispatch(appActions.showLightBox(index));
+  };
+
   return (
     <section className="relative lg:grid lg:w-1/3 lg:grid-cols-4 lg:gap-6 lg:auto-rows-max">
       <PreviousButton
@@ -29,6 +33,7 @@ const FeaturedImage = () => {
         clickHandler={decrementActiveThumbnailIndex}
       />
       <img
+        onClick={() => showLightBox(activeThumbnailIndex)}
         className="w-full lg:col-start-1 lg:col-span-4 lg:w-full lg:h-auto lg:rounded-xl"
         src={fullImages[activeThumbnailIndex]}
         alt="shoe"

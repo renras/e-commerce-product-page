@@ -7,8 +7,8 @@ const Thumbnails = () => {
     (state) => state.app.products[0].thumbnail
   );
 
-  const showLightBox = (index: number): void => {
-    dispatch(appActions.showLightBox(index));
+  const changeActiveThumbnailIndex = (index: number): void => {
+    dispatch(appActions.changeActiveThumbnailIndex(index));
   };
 
   return (
@@ -18,7 +18,7 @@ const Thumbnails = () => {
           <div
             className="relative border-2 border-opacity-0 rounded-xl overflow-hidden border-orange hover:border-opacity-100 w-full h-auto bg-orange bg-opacity-0 hover:bg-opacity-100 cursor:pointer hidden lg:block"
             key={index}
-            onClick={() => showLightBox(index)}
+            onClick={() => changeActiveThumbnailIndex(index)}
           >
             <img
               className="hover:opacity-20"
