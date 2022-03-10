@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import LightBox from "./Components/LightBox/LightBox";
 import NavDrawer from "./Components/NavDrawer/NavDrawer";
+import LogIn from "./Components/Login/LogIn";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -18,6 +19,9 @@ function App() {
   const showLightBox: boolean = useAppSelector(
     (state) => state.app.showLightBox
   );
+  const showLoginForm: boolean = useAppSelector(
+    (state) => state.app.showLoginForm
+  );
 
   return (
     <>
@@ -29,6 +33,7 @@ function App() {
       <Navbar />
       <Home />
       {showLightBox && <LightBox />}
+      {showLoginForm && <LogIn />}
     </>
   );
 }

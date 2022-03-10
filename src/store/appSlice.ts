@@ -28,6 +28,8 @@ interface InitialState {
   activeThumbnailIndex: number;
   showNavDrawer: boolean;
   showCartContent: boolean;
+  isLoggedIn: boolean;
+  showLoginForm: boolean;
 }
 
 const initialState: InitialState = {
@@ -45,6 +47,8 @@ const initialState: InitialState = {
   activeThumbnailIndex: 0,
   showNavDrawer: false,
   showCartContent: false,
+  isLoggedIn: false,
+  showLoginForm: false,
 };
 
 const appSlice = createSlice({
@@ -120,6 +124,9 @@ const appSlice = createSlice({
     },
     showCart(state) {
       state.showCartContent = !state.showCartContent;
+    },
+    showLoginForm(state) {
+      state.showLoginForm = !state.showLoginForm;
     },
   },
 });

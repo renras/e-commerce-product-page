@@ -6,8 +6,6 @@ import Nav from "./Nav";
 import logo from "../../images/logo.svg";
 import Menu from "../Menu/Menu";
 import CartContent from "../CartContent/CartContent";
-import avatar from "../../images/image-avatar.png";
-import Avatar from "../../Components/Avatar/Avatar";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -15,13 +13,18 @@ const Navbar = () => {
   const showCartContent: boolean = useAppSelector(
     (state) => state.app.showCartContent
   );
+  const isLoggedIn: boolean = useAppSelector((state) => state.app.isLoggedIn);
 
-  const openNavDrawer = (): void => {
+  const openNavDrawer = () => {
     dispatch(appActions.showNavDrawer());
   };
 
-  const showCart = (): void => {
+  const showCart = () => {
     dispatch(appActions.showCart());
+  };
+
+  const showLoginForm = () => {
+    dispatch(appActions.showLoginForm());
   };
 
   return (
@@ -39,7 +42,7 @@ const Navbar = () => {
           )}
           {showCartContent && <CartContent />}
         </div>
-        <Avatar img={avatar} />
+        {!isLoggedIn && <button onClick={showLoginForm}>Log In</button>}
       </div>
     </header>
   );
