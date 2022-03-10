@@ -26,7 +26,7 @@ const LightBox = () => {
   return (
     <section className="fixed top-0 left-0 bottom-0 h-full w-full flex items-center justify-center bg-black bg-opacity-70">
       <div className="flex flex-col gap-6 w-1/3">
-        <CloseButton onClick={showLightBox} />
+        <CloseButton onClick={showLightBox} className="self-end" />
         <div className="flex flex-row relative">
           <PreviousButton
             className="-left-6"

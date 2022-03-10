@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   const showLoginForm = () => {
-    dispatch(appActions.showLoginForm());
+    dispatch(appActions.toggleLoginForm());
   };
 
   return (

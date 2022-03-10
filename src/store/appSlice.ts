@@ -125,7 +125,7 @@ const appSlice = createSlice({
     showCart(state) {
       state.showCartContent = !state.showCartContent;
     },
-    showLoginForm(state) {
+    toggleLoginForm(state) {
       state.showLoginForm = !state.showLoginForm;
     },
   },
