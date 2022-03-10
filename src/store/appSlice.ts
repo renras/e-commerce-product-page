@@ -9,20 +9,31 @@ import fullimage2 from "../images/image-product-2.jpg";
 import fullimage3 from "../images/image-product-3.jpg";
 import fullimage4 from "../images/image-product-4.jpg";
 
+import * as data from "../users.json";
+
+interface User {
+  username: string;
+  password: string;
+}
+
+interface Products {
+  title: string;
+  price: number;
+  thumbnail: string[];
+  fullimages: string[];
+}
+
+interface Cart {
+  title: string;
+  price: number;
+  quantity: number;
+  thumbnail: string;
+  id: number;
+}
+
 interface InitialState {
-  products: {
-    title: string;
-    price: number;
-    thumbnail: string[];
-    fullimages: string[];
-  }[];
-  cart: {
-    title: string;
-    price: number;
-    quantity: number;
-    thumbnail: string;
-    id: number;
-  }[];
+  products: Products[];
+  cart: Cart[];
   totalItems: number;
   showLightBox: boolean;
   activeThumbnailIndex: number;
@@ -30,6 +41,7 @@ interface InitialState {
   showCartContent: boolean;
   isLoggedIn: boolean;
   showLoginForm: boolean;
+  users: User[];
 }
 
 const initialState: InitialState = {
@@ -42,6 +54,7 @@ const initialState: InitialState = {
     },
   ],
   cart: [],
+  users: data.users,
   totalItems: 0,
   showLightBox: false,
   activeThumbnailIndex: 0,
