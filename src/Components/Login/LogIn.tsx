@@ -27,7 +27,12 @@ const LogIn = () => {
       // check password
       if (userFound.password === data.password) {
         // login
-        console.log("login success");
+        dispatch(
+          appActions.login({
+            username: userFound.username,
+            password: userFound.password,
+          })
+        );
         dispatch(appActions.toggleLoginForm());
         return;
       } else {

@@ -13,7 +13,7 @@ const Navbar = () => {
   const showCartContent: boolean = useAppSelector(
     (state) => state.app.showCartContent
   );
-  const isLoggedIn: boolean = useAppSelector((state) => state.app.isLoggedIn);
+  const loggedInUser = useAppSelector((state) => state.app.loggedInUser);
 
   const openNavDrawer = () => {
     dispatch(appActions.showNavDrawer());
@@ -42,7 +42,11 @@ const Navbar = () => {
           )}
           {showCartContent && <CartContent />}
         </div>
-        {!isLoggedIn && <button onClick={showLoginForm}>Log In</button>}
+        {!loggedInUser ? (
+          <button onClick={showLoginForm}>Log In</button>
+        ) : (
+          <p>{loggedInUser.username}</p>
+        )}
       </div>
     </header>
   );

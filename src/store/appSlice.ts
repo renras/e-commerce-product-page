@@ -11,7 +11,7 @@ import fullimage4 from "../images/image-product-4.jpg";
 
 import * as data from "../users.json";
 
-interface User {
+export interface User {
   username: string;
   password: string;
 }
@@ -39,9 +39,9 @@ interface InitialState {
   activeThumbnailIndex: number;
   showNavDrawer: boolean;
   showCartContent: boolean;
-  isLoggedIn: boolean;
   showLoginForm: boolean;
   users: User[];
+  loggedInUser: User | null;
 }
 
 const initialState: InitialState = {
@@ -60,7 +60,7 @@ const initialState: InitialState = {
   activeThumbnailIndex: 0,
   showNavDrawer: false,
   showCartContent: false,
-  isLoggedIn: false,
+  loggedInUser: null,
   showLoginForm: false,
 };
 
@@ -140,6 +140,9 @@ const appSlice = createSlice({
     },
     toggleLoginForm(state) {
       state.showLoginForm = !state.showLoginForm;
+    },
+    login(state, action: PayloadAction<User>) {
+      state.loggedInUser = action.payload;
     },
   },
 });
